@@ -75,5 +75,195 @@ score = 10;
 // console.log(person.hobbist[1]); //Output movies
 // console.log(person.address.city); //Output Boston
 
-// const { firstName, lastName, address:{ city } } = person; //Destructure, pulling things out. 
+// const { firstName, lastName, address:{ city } } = person; //Destructuring, pulling things out. 
 // console.log(firstName); //John
+// console.log(city); //Bosto
+
+// person.email = 'john.gmail.com';  //Email added to person
+// console.log(person); 
+
+const todos = [
+    {
+        id: 1,
+        text: 'Take out trash',
+        isCompleted: true
+    }, 
+    {
+        id: 2,
+        text: 'Metting with boss',
+        isCompleted: true
+    },
+    {
+        id: 3,
+        text: 'Dentist appt',
+        isCompleted: false
+    }
+];
+
+//console.log(todaos[1].text); //Output: meeting with boss.
+
+//const todoJSON = JSON.stringify(todos);  //Make it JSON format
+//console.log(todoJSON);
+
+// LOOPS
+// for
+// for(let i = 0; i < 10; i++){
+//     console.log(`For Loop Number: ${i}`);
+// }
+
+// while
+// let i = 0;
+// while( i < 10) {
+//     console.log(`While Loop Number: ${i}`)
+//     i++;
+// }
+
+// For loop array
+// for(let i = 0; i < todos.length; i++) {
+//     console.log(todo[i].text);
+// }
+
+// For of loop
+// for(let singleTodo of todos) {
+//    console.log(todo[i].text);
+//}
+
+// forEach, map, filter
+
+// todos.forEach(function(singleTodo){   //For each todo output todo.text
+//     console.log(todo.text);
+// });
+
+// todos.map(function(singleTodo){
+//   return todo.text;
+// });      // Loop and return a array of just the text values.
+// console.log(todoText); 
+
+// const todoCompleted = todos.filter(function(singleTodo){
+//    return singleTodo.isCompleted === true;       
+// });
+// console.log(todoCompleted); //Output: 2 array object isCompleted is set to true
+
+// const todoCompleted = todos.filter(function(singleTodo){
+//    return singleTodo.isCompleted === true;       
+// }).map(function(singleTodo){
+//     return todos.text;
+// });
+
+//console.log(todoCompleted); //Output: 2 array object text isCompleted is set to true 
+
+
+// Conditions
+// const x = 10;
+
+// if (x == 10) {    // x === match data type. x === 10
+//     console.log('x is 10');
+// }
+
+// if (x === 10) {   
+//     console.log('x is 10');
+// } else if(x > 10) {
+//    console.log('x is NOT 10')
+// } else {
+//    console.log('x is less than 10');
+// }
+
+// const y = 10;
+// if (x > 5 || y > 10) {    // one or the other have to be true
+//     console.log('x is more than 5 or y is more than 10');
+// }
+// if (x > 5 && y > 10) {    // both have to be true
+//     console.log('x is more than 5 or y is more than 10');
+// }
+
+// const x = 10;
+// ? turnery operater = then
+// : else
+// const color = x > 10 ? 'red' : 'blue';
+
+// switch (color) {
+//   case 'red':
+//      console.log('color is red');
+//      break;
+//   case 'blue':
+//      console.log('color is blue);
+//      break;
+//   default:
+//      console.log('color is not red or blue);
+// }
+
+
+// Function
+// function addNums(num1 = 1, num2 = 1){ //With default values;
+//    console.log(num1 + num2);
+// }
+//
+// addNums(5, 5);
+
+// function addNums(num1 = 1, num2 = 1){ //With default values;
+//    return num1 + num2;
+// }
+//
+// console.log(addNums(5, 5));
+
+// Arrow Function
+// const addNums = (num1 = 1, num2 = 1) => {
+//      return num1 + num2;
+// }
+//
+// console.log(addNums(5, 5));
+
+// const addNums = (num1 = 1, num2 = 1) => console.log(num1 + num2);
+//
+// addNums(5, 5);
+
+// const addNums = (num1 = 1, num2 = 1) => num1 + num2; //Return num1 + num2;
+//
+// console.log(addNums(5, 5));
+
+// const addNums = num1 => num1 + 5;        //One parameter, parathanese not needed.
+//
+// addNums(5);
+
+// todos.forEach((singleTodo) => console.log(todo));
+
+// Object
+// function Person(firstName, lastName, dob) {  //constructor function
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.dob = new Date(dob);  //Built in date object
+//     this.getBirthYear = function() { //Method
+//       return this.dob.getfFullYear();
+//     }
+//     this.getFullName = function() {
+//          return `${this.firstName} ${this.lastName}`;
+//     }
+// }
+// Constructor function start with capital letter.
+
+// Instantiate object
+// const person1 = new Person('John', 'Doe', '4-3-1980');
+// const person2 = new Person('Mary', 'Smith', '4-4-1940');
+// console.log(person1);
+// console.log(person2.dob.getFullYear());
+// console.log(person1.getBirthYear());
+
+
+// Prototype: so you dont use or console log object method everytime
+// function Person(firstName, lastName, dob) {  //constructor function
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.dob = new Date(dob);  //Built in date object
+// }
+// Person.prototype.getBirthYear = function() {
+//     return this.dob.getfFullYear();
+// }
+//
+// Person.prototype.getFullName = function() {
+//      return `${this.firstName} ${this.lastName}`;
+// }
+// const person1 = new Person('John', 'Doe', '4-3-1980');
+// console.log(person1.getBirthYear());
+
+
+// Classes : Prettier way to write it
