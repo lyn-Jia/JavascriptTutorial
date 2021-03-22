@@ -267,3 +267,111 @@ const todos = [
 
 
 // Classes : Prettier way to write it
+// class Person {
+//     constructor(firstName, lastName, dob) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.dob = new Date(dob);
+//     }
+
+//     getBirthYear(){
+//         return this.dob.getFullYear();
+//     }
+
+//     getFullName() {
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+// }
+
+// const person1 = new Person('John', 'Doe', '4-3-1980');
+// console.log(person1.getBirthYear());
+
+// DOM 
+// console.log(window);
+// window.alert(1); //Window top level default object.
+// window.document; //mekes up the dom
+
+// single element selector
+// document.getElementBy('htmlID');
+// document.querySelector('htmlID'); //Grab first of anything (h1, #id, .class)
+
+// mutiple element selector
+// document.querySelectorAll('.htmlClass'); //Grab all (h1, #id, .class)
+// console.log(getElementByClassName('htmlClass');
+
+// element loop
+// const items = document.querySelectorAll('.htmlClass');
+// items.forEach((item) => console.log(item));
+
+// Manipulate DOM
+// const ul = document.querySelector('.items');
+// ul.remove();     //remove ul element
+// ul.lastElementChild.remove();
+// ul.firstElementChild.textContent = 'Hello';  //Change text conent of first ul element.
+// ul.children[1].innerText = 'Brad';
+// ul.lastElementChild.innerHTML = '<h4>Hello</h4>'; //Put change tag within.
+
+// const btn = document.querySelector('.btn');
+// btn.style.background = 'red'; //Change color of a button
+
+// EVENTS
+
+// const btn = document.querySelector('.btn');
+// btn.addEventListener('click',  (event) => 
+//      {console.log('click'); }); //When a button is clicked run a function and create event object.
+
+
+// const btn = document.querySelector('.btn');
+// btn.addEventListener('click',  (event) => 
+//      {   event.preventDefault();
+//          console.log('click'); }); //When a button is clicked run a function.
+
+
+// const btn = document.querySelector('.btn');
+// btn.addEventListener('click',  (event) => 
+//      {   event.preventDefault();
+//          document.querySelector('#my-form).style.background = '#ccc'; //Change color of the form element 
+//          document.querySelector('body').classList.add('bg-dark');
+//          document.querySelector('.items').lastElementChild.innerHTML = '<h1>Hello</h1>';
+//  });
+
+
+// TINY PROJECT: DOM Manipulate
+// Put DOM elements into variables
+// const myForm = document.querySelector('#my-form');
+// const nameInput = document.querySelector('#name');
+// const emailInput = document.querySelector('#email');
+// const msg = document.querySelector('.msg');
+// const userList = document.querySelector('#users');
+
+// // Listen for form submit
+// myForm.addEventListener('submit', onSubmit);
+
+// function onSubmit(e) {
+//   e.preventDefault();
+  
+//   if(nameInput.value === '' || emailInput.value === '') {
+//     // alert('Please enter all fields');
+//     msg.classList.add('error'); //Add html 'error' class.
+//     msg.innerHTML = 'Please enter all fields';
+
+//     // Remove error after 3 seconds
+//     setTimeout(() => msg.remove(), 3000);
+//   } else {
+//     // Create new list item with user
+//     const li = document.createElement('li');
+
+//     // Add text node with input values
+//     li.appendChild(document.createTextNode(`${nameInput.value}: ${emailInput.value}`));
+
+//     // Add HTML
+//     // li.innerHTML = `<strong>${nameInput.value}</strong>e: ${emailInput.value}`;
+
+//     // Append to ul
+//     userList.appendChild(li);
+
+//     // Clear fields
+//     nameInput.value = '';
+//     emailInput.value = '';
+//   }
+// }
