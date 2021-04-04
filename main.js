@@ -315,16 +315,18 @@ const todos = [
 // btn.style.background = 'red'; //Change color of a button
 
 // EVENTS
-
 // const btn = document.querySelector('.btn');
 // btn.addEventListener('click',  (event) => 
 //      {console.log('click'); }); //When a button is clicked run a function and create event object.
 
 
 // const btn = document.querySelector('.btn');
-// btn.addEventListener('click',  (event) => 
-//      {   event.preventDefault();
-//          console.log('click'); }); //When a button is clicked run a function.
+// When a button is clicked run a function.
+// btn.addEventListener('click',  (event) =>     
+//      {   
+//          event.preventDefault();    //Prevent Default Behavior 
+//          console.log('click'); 
+//      }); 
 
 
 // const btn = document.querySelector('.btn');
@@ -338,40 +340,41 @@ const todos = [
 
 // TINY PROJECT: DOM Manipulate
 // Put DOM elements into variables
-// const myForm = document.querySelector('#my-form');
-// const nameInput = document.querySelector('#name');
-// const emailInput = document.querySelector('#email');
-// const msg = document.querySelector('.msg');
-// const userList = document.querySelector('#users');
+const myForm = document.querySelector('#my-form');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const msg = document.querySelector('.msg');
+const userList = document.querySelector('#users');
 
-// // Listen for form submit
-// myForm.addEventListener('submit', onSubmit);
+// Listen for form submit
+myForm.addEventListener('submit', onSubmit);
 
-// function onSubmit(e) {
-//   e.preventDefault();
+function onSubmit(e) {
+  e.preventDefault();
   
-//   if(nameInput.value === '' || emailInput.value === '') {
-//     // alert('Please enter all fields');
-//     msg.classList.add('error'); //Add html 'error' class.
-//     msg.innerHTML = 'Please enter all fields';
+  if(nameInput.value === '' || emailInput.value === '') {
+    // alert('Please enter all fields');
+    msg.classList.add('error'); //Add html 'error' class.
+    msg.innerHTML = 'Please enter all fields';
 
-//     // Remove error after 3 seconds
-//     setTimeout(() => msg.remove(), 3000);
-//   } else {
-//     // Create new list item with user
-//     const li = document.createElement('li');
+    // Remove error after 3 seconds
+    setTimeout(() => msg.remove(), 3000);
+  } else {
+    // Create new list item with user
+    const li = document.createElement('li');
 
-//     // Add text node with input values
-//     li.appendChild(document.createTextNode(`${nameInput.value}: ${emailInput.value}`));
+    // Add text node with input values
+    li.appendChild(document.createTextNode(`${nameInput.value}: ${emailInput.value}`));
 
-//     // Add HTML
-//     // li.innerHTML = `<strong>${nameInput.value}</strong>e: ${emailInput.value}`;
+    // Add HTML
+    // li.innerHTML = `<strong>${nameInput.value}</strong>e: ${emailInput.value}`;
 
-//     // Append to ul
-//     userList.appendChild(li);
+    // Append to ul
+    userList.appendChild(li);
 
-//     // Clear fields
-//     nameInput.value = '';
-//     emailInput.value = '';
-//   }
-// }
+    // Clear fields
+    nameInput.value = '';
+    emailInput.value = '';
+  }
+}
+
